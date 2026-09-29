@@ -11,10 +11,10 @@
 
 | # | Name | Student ID | GitHub Username | Main Responsibility |
 |---|---|---|---|---|
-| 1 | นายจักรพรรดิ โพธิพิภัทรกุล | 660710976 | `@[กรอก GitHub username]` | Concept + Short Code Illustration (สรุปแนวคิดหลัก + โค้ดตัวอย่างสั้น) |
-| 2 | นายกฤตเมธ ไทยภักดี | 670710121 | `@[กรอก GitHub username]` | Detailed Code + Live Demo (โค้ดเชิงลึก + สาธิตสด) |
-| 3 | นางสาวกัญญรัชต์ สมหวังพรเจริญ | 670710122 | `@[กรอก GitHub username]` | Rust vs Other Language + PPL Analysis (เปรียบเทียบภาษา + วิเคราะห์เชิง PPL) |
-| 4 | นางสาวกัญญาณัฐ เขมนรากร | 670710123 | `@[กรอก GitHub username]` | Exercises + Common Mistakes + Challenge (แบบฝึกหัด + ข้อผิดพลาดที่พบบ่อย + คำถามท้าทาย) |
+| 1 | นายจักรพรรดิ โพธิพิภัทรกุล | 660710976 | `@660710976` | Concept + Short Code Illustration (สรุปแนวคิดหลัก + โค้ดตัวอย่างสั้น) |
+| 2 | นายกฤตเมธ ไทยภักดี | 670710121 | `@670710121` | Detailed Code + Live Demo (โค้ดเชิงลึก + สาธิตสด) |
+| 3 | นางสาวกัญญรัชต์ สมหวังพรเจริญ | 670710122 | `@670710122` | Rust vs Other Language + PPL Analysis (เปรียบเทียบภาษา + วิเคราะห์เชิง PPL) |
+| 4 | นางสาวกัญญาณัฐ เขมนรากร | 670710123 | `@670710123` | Exercises + Common Mistakes + Challenge (แบบฝึกหัด + ข้อผิดพลาดที่พบบ่อย + คำถามท้าทาย) |
 
 > แก้ไข GitHub Username ของแต่ละคนให้ตรงกับบัญชีจริงก่อนเริ่มทำงาน (ผู้สอนจะใช้คอลัมน์นี้เชิญเป็น collaborator ของ repository)
 
