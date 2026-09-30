@@ -153,27 +153,19 @@ fn panic_error() -> ! {
 
 ```rust
 fn main() {
-    
     let x = factorial(5);
-
     print!("{}", x)
 }
 
 fn factorial(num: i32) -> i32 {
-
     let mut result = 1;
-
     if num == 0 {
-
         return result;
     }
     else {
-        
         for i in 1..=num {
-
             result *= i
         }
-
         return result;
     }
 }
@@ -187,7 +179,9 @@ fn factorial(num: i32) -> i32 {
 
 **Explanation**
 
-`[อธิบาย code ทีละส่วนที่สำคัญ]`
+`factorial(num): ฟังก์ชันคำนวณแฟกทอรีล`
+`ตรวจสอบเงื่อนไขว่าถ้า num เป็น 0 จะคืนค่า 1 ทันที`
+`หากไม่ใช่ จะใช้ลูป for วนซ้ำตั้งแต่ 1 ถึง num (รวม num ด้วยผ่าน 1..=num) เพื่อนำค่ามาคูณสะสมในตัวแปร result จนครบ (1 x 2 x 3 x 4 x 5 = 120) แล้วคืนค่าผลลัพธ์กลับไป`
 
 ---
 
