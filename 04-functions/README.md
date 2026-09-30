@@ -149,7 +149,7 @@ fn panic_error() -> ! {
 
 ### Example 1 — `Factorial`
 
-**Purpose:** `[ต้องการสาธิตอะไร]`
+**Purpose:** `การสร้าง Function การคำนวนอะไรบ้างอย่างในที่นี้ขอยกเป็นการหาค่า Factorial`
 
 ```rust
 fn main() {
