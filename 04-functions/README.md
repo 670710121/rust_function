@@ -143,4 +143,73 @@ fn panic_error() -> ! {
 
 ---
 
+## 6. Runnable Code Examples
+
+> **ข้อกำหนด:** Code ทุกตัวต้อง Compile และ Run ได้จริงก่อนนำมาใส่ในเอกสาร
+
+### Example 1 — `Factorial`
+
+**Purpose:** `[ต้องการสาธิตอะไร]`
+
+```rust
+fn main() {
+    
+    let x = factorial(5);
+
+    print!("{}", x)
+}
+
+fn factorial(num: i32) -> i32 {
+
+    let mut result = 1;
+
+    if num == 0 {
+
+        return result;
+    }
+    else {
+        
+        for i in 1..=num {
+
+            result *= i
+        }
+
+        return result;
+    }
+}
+```
+
+**Expected Output**
+
+```text
+120
+```
+
+**Explanation**
+
+`[อธิบาย code ทีละส่วนที่สำคัญ]`
+
+---
+
+### Example 2 — `[ชื่อ Example]`
+
+**Purpose:** `[ต้องการสาธิตอะไร]`
+
+```rust
+fn main() {
+    // Write your runnable Rust code here
+}
+```
+
+**Expected Output**
+
+```text
+[expected output]
+```
+
+**Explanation**
+
+`[อธิบาย code]`
+
+---
 *โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
