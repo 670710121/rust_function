@@ -190,8 +190,36 @@ fn factorial(num: i32) -> i32 {
 **Purpose:** `[ต้องการสาธิตอะไร]`
 
 ```rust
-fn main() {
-    // Write your runnable Rust code here
+use std::io;
+#[derive(Debug)]
+struct Product {
+    name: String,
+    price: f64,
+}
+
+fn create_discount(discount: f64) -> impl Fn(f64) -> f64 {
+    move |price| price * (1.0 - discount)
+}
+fn calculate(
+    products: &[Product],
+    operation: impl Fn(f64) -> f64,
+) {
+    for product in products {
+        let new_price = operation(product.price);
+
+        println!(
+            "{} : {:.2} -> {:.2}",
+            product.name,
+            product.price,
+            new_price
+        );
+    }
+}
+fn input(message: &str) -> String {
+    let mut value: String = String::new();
+    println!("{}", message);
+    io::stdin().read_line(&mut value).unwrap();
+    value.trim().to_string()
 }
 ```
 
