@@ -289,4 +289,185 @@ mac : 44900.00 -> 40410.00
 `-> f64 = คืนค่าตัวเลขชนิด f64`<br>
 
 ---
-*โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
+## 7. Common Mistakes
+
+### Mistake 1 — Function Overloading
+
+**Problem**
+
+บางครั้งอาจเกิดการสับสนในการใช้ และคิดว่าภาษา rust สามารถทำ `Function Overloading` ได้ (การสร้างฟังก์ชันชื่อเดียวกัน แต่รับ Parameter หรือมี Type ต่างกัน)  แต่ในความจริงเป็นแล้ว rust ไม่รองรับการทำ Function Overloading โดยตรง
+
+**Incorrect Code**
+
+```rust
+fn add(x:i32 , y:i32) -> i32{
+    x + y
+}
+
+fn add(x: f64, y: f64) -> f64 {
+    x + y
+}
+
+fn main() {
+    let sum1 = add(2,5);
+    let sum2 = add(2.2,5.5);
+    println!("sum1 = {}",sum1);
+    println!("sum2 = {}",sum2);
+}
+```
+
+**Correct Code**
+
+```rust
+fn add_i32(x:i32 , y:i32) -> i32{
+    x + y
+}
+
+fn add_f64(x: f64, y: f64) -> f64 {
+    x + y
+}
+
+fn main() {
+    let sum1 = add_i32(2,5);
+    let sum2 = add_f64(2.2,5.5);
+    println!("sum1 = {}",sum1); // sum1 = 7
+    println!("sum2 = {}",sum2); // sum2 = 7.7
+}
+```
+
+**Why?**
+
+* เพื่อป้องกันความสับสนของ `Type Inference` : หากมี Overloading อาจทำให้ Compiler สับสนหรือคาดเดาประเภทข้อมูลผิดจากที่ผู้เขียนตั้งใจ
+
+* แนวทางใกล้เคียง : ใช้ `Generics` หรือ `Traits` แทน Function Overloading 
+
+---
+
+### Mistake 2 — Default Parameter
+
+**Problem**
+
+ภาษา rust ไม่รองรับการทำ `default parameter`(การกำหนดค่าเริ่มให้กับฟังก์ชัน)
+
+**Incorrect Code**
+
+```rust
+fn greet(name: &str, msg: &str = "Hello") {
+    println!("{}, {}!",msg,name);
+}
+fn main() {
+    greet("Alice", None);               
+    greet("Bob", Some("Good morning")); 
+}
+```
+
+**Correct Code**
+
+```rust
+fn greet(name: &str, msg: Option<&str>) {
+    let greeting = match msg {
+        Some(msg) => msg,
+        None => "Hello",
+    };
+    println!("{}, {}!", greeting, name);
+}
+fn main() {
+    greet("Alice", None); // Hello, Alice!    
+    greet("Bob", Some("Good morning")); // Good morning, Bob!
+}
+```
+
+**Why?**
+
+* เพื่อความชัดเจน (Explicit over Implicit): Rust เน้นให้ผู้อ่านโค้ดมองเห็นสิ่งที่เกิดขึ้นอย่างชัดเจนที่สุด โดยไม่มีระบบซ่อนการทำงานอยู่เบื้องหลัง
+
+* แนวทางใกล้เคียง : ใช้ `Option<T>` หรือ `Default Trait` แทน Default Parameters
+
+---
+
+## 8. Exercises
+
+### Exercise 1 — Is_Even
+
+**Problem**
+
+จงเขียนฟังก์ชันชื่อ `is_even` ที่รับตัวเลขจำนวนเต็ม `(i32)` เข้ามา 1 ตัว แล้วทำการตรวจสอบว่าตัวเลขนั้นเป็น เลขคู่ (Even Number) หรือไม่
+* หากเป็นเลขคู่ ให้พิมพ์คำว่า "`True`"
+* หากเป็นเลขคี่ ให้พิมพ์คำว่า "`False`"
+
+**Hint**
+
+* สามารถตรวจสอบเลขคู่ โดยใช้ตัวดำเนินการ Modulo (%)
+
+**Solution**
+
+```rust
+fn is_even(number: i32){
+    if number % 2 == 0 {
+        println!("True");
+    } else {
+        println!("False");
+    }
+}
+fn main() {
+    let num1 = 4;
+    let num2 = 7;
+
+    is_even(num1); // True
+    is_even(num2); // False
+}
+```
+**Explanation**
+
+* `fn is_even(number: i32)`  : สร้างฟังก์ชันชื่อ `is_even`  ที่รอรับค่าตัวเลขจำนวนเต็ม `(i32)` เข้ามาผ่านพารามิเตอร์ชื่อ `number`
+* `if number % 2 == 0`  : นำเลขมาหารด้วย 2 ถ้าหารลงตัว เศษเป็น 0 หมายความว่าตัวเลขนั้นเป็นเลขคู่ ให้พิมพ์ `"True"` 
+* `else`  : ถ้าหารไม่ลงตัว หมายความว่าตัวเลขนั้นเป็นเลขคี่ ให้พิมพ์ `"False"` 
+* `main()`  : มีการประกาศตัวแปรที่เป็นตัวเลข และส่งตัวแปรไปเช็ค โดยส่ง 4 ได้ผลลัพธ์เป็น True และส่ง 7 ไปเช็ค ได้ผลลัพธ์เป็น `False`
+
+---
+### Exercise 2 — Grade_Check
+
+**Problem**
+
+จงเขียนฟังก์ชันชื่อ `grade_check` โดยรับพารามิเตอร์เป็นตัวเลขจำนวนเต็ม  `score (i32)` โดยคะแนนที่รับมาจะไม่เป็นค่าติดลบ หรือมากกว่า 100  จากนั้นจะตัดเกรดโดยใช้เกณฑ์ว่า ถ้าได้ไม่ถึง 40 คะแนนได้เกรดเป็น Fail, ได้ถึง 40 แต่ไม่ถึง 80 คะแนนได้เกรดเป็น Pass, และถ้าได้
+ถึง 80 คะแนน จะได้เกรดเป็น Excellent
+
+**Hint**
+
+* ฟังก์ชันนี้ไม่ต้องคืนค่า `(ไม่ต้องใส่ -> ...)` ใช้ `println!` แสดงข้อความในฟังก์ชันได้เลย
+
+**Solution**
+
+```rust
+fn grade_check(score: i32){
+    if score >= 80 {
+        println!("Exellent");
+    }else if score >= 40 {
+        println!("Pass");
+    } else {
+        println!("Fail");
+    }
+}
+fn main() {
+    grade_check(39); // Fail
+    grade_check(40); // Pass
+    grade_check(90); // Exellent
+}
+```
+
+**Explanation**
+
+* `fn grade_check(score: i32)`
+    * รับพารามิเตอร์ `score` ชนิดจำนวนเต็ม `i32`
+    * ไม่มี `-> ...` แปลว่าฟังก์ชันนี้ไม่คืนค่า ทำหน้าที่แค่แสดงข้อความออกหน้าจอ
+
+* `if score >= 80` : ถ้าคะแนนมากกว่าหรือเท่ากับ 80 ให้แสดง `Excellent` 
+
+* `else if score >= 40` : ถ้า`score` น้อยกว่า 80 และ `>= 40` ให้แสดง `Pass`
+
+* `else` : กรณีที่เหลือทั้งหมด คือ `score` น้อยกว่า 40 ให้แสดง `Fail`
+
+* `grade_check(...)` ส่งค่าตัวเลขไปยังฟังก์ชัน จะแสดงผลออกมาเป็น `Excellent` `Pass` และ `Fail` ตามเงื่อนไขที่เรากำหนดไว้
+
+---
+
