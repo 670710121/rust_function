@@ -766,3 +766,139 @@ Rust และ C++ เป็นภาษาที่เน้น ประสิ
 Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตรวจสอบความปลอดภัยของ Memory ตั้งแต่ Compile Time ส่วน C++ ให้อิสระแก่ Programmer ในการจัดการ Memory และ Pointer มากกว่า จึงมีความยืดหยุ่นสูง แต่ต้องระมัดระวังข้อผิดพลาดด้าน Memory มากกว่า
 
 ---
+
+
+---
+
+## 11. Teach Your Topic
+
+การนำเสนอมีสมาชิก **4 คน คนละประมาณ 5 นาที**
+
+| Member | Responsibility | Time |
+|---|---|---:|
+| Member 1 | Concept + Short Code Illustration | 5 min |
+| Member 2 | Detailed Code + Live Demo | 5 min |
+| Member 3 | Rust vs Other Language + PPL Analysis | 5 min |
+| Member 4 | Exercises + Common Mistakes + Challenge | 5 min |
+
+### Individual Contribution
+
+**Member 1**
+
+`Concept + Short Code Illustration (ช่วยทำในส่วนเนื้อหา เเต่เขาถอนไไปเเล้ว)`
+
+**Member 2**
+
+`Detailed Code + Live Demo`
+
+**Member 3**
+
+`Rust vs Other Language + PPL Analysis`
+
+**Member 4**
+
+`Exercises + Common Mistakes + Challenge`
+
+> สมาชิกทุกคนต้องสามารถอธิบาย Code ของกลุ่มได้ ไม่ใช่เฉพาะส่วนที่ตนเองเขียน
+
+---
+
+## 12. References
+
+> แนะนำให้มีอย่างน้อย **4 แหล่งอ้างอิง** และควรใช้เอกสารทางการเป็นหลัก
+
+1. `https://www.w3schools.com/rust/rust_functions.php`
+2. `https://www.geeksforgeeks.org/blogs/rust-vs-python/`
+3. `https://youtu.be/g2qJh-7AiW4?si=fOgnEv-wkoUpePpO`
+4. `https://webserv.cp.su.ac.th/lecturer/pinyotae/compro1/labs/lab_problem_set.pdf`
+
+---
+
+## 13. AI Usage Declaration
+
+สามารถใช้ AI เป็นเครื่องมือช่วยเรียนรู้และพัฒนาได้ แต่สมาชิกทุกคนต้องเข้าใจและสามารถอธิบายผลงานของกลุ่มได้
+
+| AI Tool | Purpose | How the Result Was Verified |
+|---|---|---|
+| `Chat` | `ใช้เพื่อช่วยร่างโค้ด และเปรียบเทียบเนื้อหากับเว็บอื่น ๆ` | `นำโค้ดไปทดลองรันและดูผลลัพธ์ รวมถึงตรวจสอบว่าตรงกับโจทย์และไม่มีข้อผิดพาด` |
+| `Gemini` | `เกี่ยวกับเรียนเนื้อหาเกี่ยวกับ ภาษา rust เเละ การใช้ git` | `เปิดเทียบกับ website ต่างที่มีการสอน syntax เเละ ทดลอง` |
+| `cloud AI` | `ใช้เพื่อช่วยอธิบาย concept ในเรื่องการเขียน function ของภาษา rust ` | `เปิดเทียบกับ website อื่น ๆ ที่เกี่ยวข้อง ทดลองเขียนและรันเพื่อดูผลลัพธ์` |
+
+### Declaration
+
+- [ ] Code ทุกส่วนที่นำเสนอได้รับการ Compile และทดสอบแล้ว
+- [ ] สมาชิกทุกคนสามารถอธิบาย Code ที่นำเสนอได้
+- [ ] ตรวจสอบข้อมูลจากแหล่งอ้างอิงที่น่าเชื่อถือแล้ว
+- [ ] ระบุการใช้ AI อย่างโปร่งใส
+
+**รายละเอียดการใช้ AI**
+
+`ใช้ AI ในการช่วยค้นหาข้อมูลร่วมกัน เปรียบเทียบเนื้อหากับเว็บไซต์อื่น ๆ และใช้ออกแบบโค้ดตัวอย่าง และทดลองรันพร้อมดูผลลัพธ์ `
+
+---
+
+## 14. GitHub Contribution
+
+| Member | Issues | Commits | Pull Requests | Code Reviews | Contribution |
+|---|---:|---:|---:|---:|---|
+| Member 1 `ถอน`| `---------` | `---------` | `---------`| `---------` | `------` |
+| Member 2 | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[รายละเอียด]` |
+| Member 3 | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[รายละเอียด]` |
+| Member 4 | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[จำนวน]` | `[รายละเอียด]` |
+
+### Teamwork Reflection
+
+**How did your team collaborate?**
+
+`[อธิบายกระบวนการทำงานร่วมกัน]`
+
+**Problems encountered**
+
+`[ปัญหาที่พบ]`
+
+**How did you solve them?**
+
+`[วิธีแก้ปัญหา]`
+
+---
+
+## 15. Final Checklist
+
+- [ ] Learning Objectives ครบ 3–4 ข้อ
+- [ ] Key Concepts ครบถ้วน
+- [ ] Syntax / Rules
+- [ ] Runnable Code Examples
+- [ ] Code Compile และ Run ได้จริง
+- [ ] Common Mistakes
+- [ ] Exercises 2 ข้อ พร้อม Solutions
+- [ ] PPL Perspective
+- [ ] Rust vs Other Language
+- [ ] References อย่างน้อย 4 แหล่ง
+- [ ] AI Usage Declaration
+- [ ] GitHub Contribution
+- [ ] สมาชิกทั้ง 4 คนมีส่วนร่วม
+- [ ] สมาชิกทั้ง 4 คนพร้อมนำเสนอคนละ 5 นาที
+- [ ] สมาชิกทุกคนสามารถอธิบาย Code ของกลุ่มได้
+
+---
+
+## Submission Information
+
+**Repository:** `[GitHub repository URL]`
+
+**Chapter Path:** `[เช่น chapters/01-introduction/]`
+
+**Final PR:** `#[PR number]`
+
+**Submitted by:** `[Group XX]`
+
+**Date:** `[YYYY-MM-DD]`
+
+
+
+
+
+
+
+
+
