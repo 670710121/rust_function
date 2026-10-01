@@ -842,23 +842,24 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 | Member | Issues | Commits | Pull Requests | Code Reviews | Contribution |
 |---|---:|---:|---:|---:|---|
 | Member 1 `ถอน`| `---------` | `---------` | `---------`| `---------` | `------` |
-| Member 2 | `[0]` | `[4]` | `[1]` | `[จำนวน]` | `[รายละเอียด]` |
-| Member 3 | `[จำนวน]` | `[จำนวน]` | `[1]` | `[จำนวน]` | `[รายละเอียด]` |
-| Member 4 | `[จำนวน]` | `[18]` | `[1]` | `[จำนวน]` | `[รายละเอียด]` |
+| Member 2 | `[3]` | `[6]` | `[1]` | `[3]` | `[Detailed Code + Live Demo ]` |
+| Member 3 | `[4]` | `[6]` | `[1]` | `[4]` | `[Rust vs Other Language + PPL Analysis]` |
+| Member 4 | `[2]` | `[18]` | `[1]` | `[2]` | `[Exercises + Common Mistakes + Challenge ]` |
 
 ### Teamwork Reflection
 
 **How did your team collaborate?**
 
-`[อธิบายกระบวนการทำงานร่วมกัน]`
+`นัดประชุมหาวัน Deadline วันส่งงาน สมาชิกทุกคนทำงานตามหัวข้อที่ได้รับมอบหมายตามส่วนที่ได้รับผิดชอบ โดยแต่ละคนทำงานบน Branch ของตัวเอง เมื่อทำงานเสร็จจะ commit และ Push ขึ้น GitHub แล้วสร้าง Pull Request เพื่อให้สมาชิกตรวจสอบโค้ด ก่อนที่จะ Merge เข้าสู่ Branch Main ส่วนของสไลด์ Presentation แชร์ลิงก์ไฟล์ Canva ให้สมาชิกคนอื่นเข้าไปทำงานร่วมกัน แต่ละคนรับผิดชอบเนื้อหาในส่วนของตัวเอง ช่วยกันตกแต่งและตรวจเช็คความเรียบร้อยก่อนส่งงาน
+`
 
 **Problems encountered**
 
-`[ปัญหาที่พบ]`
+`เกิด Conflict Request`
 
 **How did you solve them?**
 
-`[วิธีแก้ปัญหา]`
+`ให้สมาชิกที่ต้อง Pull Request ลบ Branch เก่าแล้วสร้าง Branch ใหม่ และ commit ใหม่ แล้วถึงจะส่ง Pull Request ไปใน Main`
 
 ---
 
@@ -884,9 +885,9 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 
 ## Submission Information
 
-**Repository:** `[GitHub repository URL]`
+**Repository:** `https://github.com/670710121/rust_function.git`
 
-**Chapter Path:** `[เช่น chapters/01-introduction/]`
+**Chapter Path:** `04-functions/`
 
 **Final PR:** `#[PR number]`
 
