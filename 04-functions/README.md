@@ -1,7 +1,7 @@
 # Rust Tutorial Project — Principles of Programming Languages
 
-> **กลุ่มที่:** `4`<br>
-> **Topic No.:** `4`<br>
+> **กลุ่มที่:** `04`<br>
+> **Topic No.:** `04`<br>
 > **Topic Name:** `Functions`<br>
 > **ประเด็นหลักที่ควรครอบคลุม:** `function declaration, parameters, return values, expressions ใน function, scope`<br>
 
