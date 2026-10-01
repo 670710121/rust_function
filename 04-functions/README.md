@@ -284,9 +284,9 @@ mac : 44900.00 -> 40410.00
 
 **Explanation**
 
-`operation = ฟังก์ชันที่ส่งเข้ามาเป็น Parameter
-Fn(f64) = รับค่าตัวเลขชนิด f64
--> f64 = คืนค่าตัวเลขชนิด f64`
+`operation = ฟังก์ชันที่ส่งเข้ามาเป็น Parameter `<br>
+`Fn(f64) = รับค่าตัวเลขชนิด f64`<br>
+`-> f64 = คืนค่าตัวเลขชนิด f64`<br>
 
 ---
 *โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
