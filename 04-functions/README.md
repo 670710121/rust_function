@@ -889,9 +889,9 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 
 **Chapter Path:** `04-functions/`
 
-**Final PR:** `#[PR number]`
+**Final PR:** `#25`
 
-**Submitted by:** `[Group XX]`
+**Submitted by:** `04`
 
 **Date:** `[YYYY-MM-DD]`
 
