@@ -259,16 +259,34 @@ fn main() {
 
 
 ```
-
-**Expected Output**
-
+**input**
+Product 1 name:
+iphone 
+Product 1 price:
+29990
+Product 2 name:
+ipad 
+Product 2 price:
+27900
+Product 3 name:
+mac
+Product 3 price:
+44900
+Discount (%):
+10
+**Output**
+iphone : 29990.00 -> 26991.00
+ipad : 27900.00 -> 25110.00
+mac : 44900.00 -> 40410.00
 ```text
 [expected output]
 ```
 
 **Explanation**
 
-`[อธิบาย code]`
+`operation = ฟังก์ชันที่ส่งเข้ามาเป็น Parameter
+Fn(f64) = รับค่าตัวเลขชนิด f64
+-> f64 = คืนค่าตัวเลขชนิด f64`
 
 ---
 *โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
