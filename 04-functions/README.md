@@ -185,25 +185,108 @@ fn factorial(num: i32) -> i32 {
 
 ---
 
-### Example 2 — `[ชื่อ Example]`
+### Example 2 — `[discount]`
 
-**Purpose:** `[ต้องการสาธิตอะไร]`
+**Purpose:** `ทำให้รู้ว่า Function สร้าง Function ได้`
 
 ```rust
-fn main() {
-    // Write your runnable Rust code here
+use std::io;
+#[derive(Debug)]
+struct Product {
+    name: String,
+    price: f64,
 }
+
+fn create_discount(discount: f64) -> impl Fn(f64) -> f64 {
+    move |price| price * (1.0 - discount)
+}
+fn calculate(
+    products: &[Product],
+    operation: impl Fn(f64) -> f64,
+) {
+    for product in products {
+        let new_price = operation(product.price);
+
+        println!(
+            "{} : {:.2} -> {:.2}",
+            product.name,
+            product.price,
+            new_price
+        );
+    }
+}
+fn input(message: &str) -> String {
+    let mut value: String = String::new();
+    println!("{}", message);
+    io::stdin().read_line(&mut value).unwrap();
+    value.trim().to_string()
+}
+
+fn main() {
+    let name1 = input("Product 1 name:");
+    let price1: f64 = input("Product 1 price:").parse().unwrap();
+    let name2 = input("Product 2 name:");
+    let price2: f64 = input("Product 2 price:").parse().unwrap();
+    let name3 = input("Product 3 name:");
+    let price3: f64 = input("Product 3 price:").parse().unwrap();
+
+    let discount: f64 = input("Discount (%):").parse().unwrap();
+
+    let products = [
+        Product {
+            name: name1,
+            price: price1,
+        },
+        Product {
+            name: name2,
+            price: price2,
+        },
+        Product {
+            name: name3,
+            price: price3,
+        },
+    ];
+
+    let discount_fn = create_discount(discount / 100.0);
+
+    calculate(&products, discount_fn);
+}
+
+
+//let mut input = String::new();
+//io::stdin().read_line(&mut input).unwrap();
+//let age: i32 = input.trim().parse().unwrap();
+
+
 ```
-
-**Expected Output**
-
+**input**
+Product 1 name:
+iphone 
+Product 1 price:
+29990
+Product 2 name:
+ipad 
+Product 2 price:
+27900
+Product 3 name:
+mac
+Product 3 price:
+44900
+Discount (%):
+10
+**Output**
+iphone : 29990.00 -> 26991.00
+ipad : 27900.00 -> 25110.00
+mac : 44900.00 -> 40410.00
 ```text
 [expected output]
 ```
 
 **Explanation**
 
-`[อธิบาย code]`
+`operation = ฟังก์ชันที่ส่งเข้ามาเป็น Parameter `<br>
+`Fn(f64) = รับค่าตัวเลขชนิด f64`<br>
+`-> f64 = คืนค่าตัวเลขชนิด f64`<br>
 
 ---
 *โครงสร้างเอกสารฉบับเต็ม (Key Concepts, Runnable Code Examples, Common Mistakes, Exercises, PPL Perspective, Rust vs Other Language, References, AI Usage Declaration, GitHub Contribution, Final Checklist) ให้ทำต่อจากจุดนี้ตาม Template หลักของวิชา (`rust_tutorial_template.md`) ที่แนบมากับใบมอบหมายงาน*
