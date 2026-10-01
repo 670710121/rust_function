@@ -36,7 +36,12 @@
 ตัวอย่างที่ไม่ได้ใส่ semicolon (;)
 ```rust
     fn add_one(x: i32) -> i32 {
-      x + 1       // คืนค่า i32
+      x + 1
+    }
+
+    fn main() {
+      let result = add_one(5);
+      println!("{}", result);
     }
 ```
 Expression สุดท้ายจะเป็นค่าที่ Function คืนกลับโดยอัตโนมัติ
@@ -103,20 +108,35 @@ Rust เป็นภาษาแบบ Multi-paradigm รองรับทั�
 #### Ownership & Borrowing
 การเรียกใช้ Function ใน Rust มีความเกี่ยวข้องกับระบบ **Ownership** ของภาษา โดยเมื่อส่งค่าเข้าไปใน Function ค่านั้นอาจถูก ย้ายความเป็นเจ้าของ (Move), คัดลอก (Copy) หรือ ยืมไปใช้ (Borrow) ขึ้นอยู่กับชนิดข้อมูลและวิธีการส่งค่า โดยไม่จำเป็นต้องใช้ Garbage Collector.
 ```rust
-  fn take(s: String) {}
-  fn len(s: &String) -> usize { s.len() }
-  fn append(s: &mut String) { s.push('!') }
+  fn take(s: String) {
+    println!("take: {}", s);
+  }
 
-  let a = String::from("hi");
-  let n = 5;
+  fn len(s: &String) -> usize {
+    s.len()
+  }
 
-  take(a);            // Move: a ใช้ต่อไม่ได้
-  let m = n;          // Copy: n ยังใช้ได้ (i32 เป็น Copy)
+  fn append(s: &mut String) {
+    s.push('!');
+  }
 
-  let mut b = String::from("hi");
-  len(&b);            // Borrow แบบอ่านอย่างเดียว
-  append(&mut b);     // Borrow แบบแก้ไขได้
-  // ออกจาก scope แล้ว drop อัตโนมัติ ไม่ต้องมี GC
+  fn main() {
+    let a = String::from("hi");
+    let n = 5;
+
+    take(a);          // Move: a ใช้ต่อไม่ได้
+
+    let m = n;        // Copy: n ยังใช้ได้ เพราะ i32 เป็น Copy
+    println!("n = {}, m = {}", n, m);
+
+    let mut b = String::from("hi");
+
+    let length = len(&b);     // Immutable Borrow
+    println!("length = {}", length);
+
+    append(&mut b);           // Mutable Borrow
+    println!("b = {}", b);
+  }
 ```
 
 ### 9.6 Why Rust?
