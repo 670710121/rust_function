@@ -893,7 +893,7 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 
 **Submitted by:** `04`
 
-**Date:** `[YYYY-MM-DD]`
+**Date:** `2026-10-03`
 
 
 
