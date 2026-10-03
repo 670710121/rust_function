@@ -843,7 +843,7 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 |---|---:|---:|---:|---:|---|
 | Member 1 `ถอน`| `---------` | `---------` | `---------`| `---------` | `------` |
 | Member 2 | `[3]` | `[8]` | `[1]` | `[3]` | `[Detailed Code + Live Demo ]` |
-| Member 3 | `[4]` | `[7]` | `[1]` | `[4]` | `[Rust vs Other Language + PPL Analysis]` |
+| Member 3 | `[4]` | `[8]` | `[1]` | `[4]` | `[Rust vs Other Language + PPL Analysis]` |
 | Member 4 | `[2]` | `[1]` | `[1]` | `[2]` | `[Exercises + Common Mistakes + Challenge ]` |
 
 ### Teamwork Reflection
@@ -889,7 +889,7 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 
 **Chapter Path:** `04-functions/`
 
-**Final PR:** `#25`
+**Final PR:** `#30`
 
 **Submitted by:** `04`
 
