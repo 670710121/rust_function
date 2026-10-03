@@ -826,10 +826,10 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 
 ### Declaration
 
-- [ ] Code ทุกส่วนที่นำเสนอได้รับการ Compile และทดสอบแล้ว
-- [ ] สมาชิกทุกคนสามารถอธิบาย Code ที่นำเสนอได้
-- [ ] ตรวจสอบข้อมูลจากแหล่งอ้างอิงที่น่าเชื่อถือแล้ว
-- [ ] ระบุการใช้ AI อย่างโปร่งใส
+- [✓] Code ทุกส่วนที่นำเสนอได้รับการ Compile และทดสอบแล้ว
+- [✓] สมาชิกทุกคนสามารถอธิบาย Code ที่นำเสนอได้
+- [✓] ตรวจสอบข้อมูลจากแหล่งอ้างอิงที่น่าเชื่อถือแล้ว
+- [✓] ระบุการใช้ AI อย่างโปร่งใส
 
 **รายละเอียดการใช้ AI**
 
@@ -842,9 +842,9 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 | Member | Issues | Commits | Pull Requests | Code Reviews | Contribution |
 |---|---:|---:|---:|---:|---|
 | Member 1 `ถอน`| `---------` | `---------` | `---------`| `---------` | `------` |
-| Member 2 | `[3]` | `[6]` | `[1]` | `[3]` | `[Detailed Code + Live Demo ]` |
-| Member 3 | `[4]` | `[6]` | `[1]` | `[4]` | `[Rust vs Other Language + PPL Analysis]` |
-| Member 4 | `[2]` | `[18]` | `[1]` | `[2]` | `[Exercises + Common Mistakes + Challenge ]` |
+| Member 2 | `[3]` | `[8]` | `[1]` | `[3]` | `[Detailed Code + Live Demo ]` |
+| Member 3 | `[4]` | `[7]` | `[1]` | `[4]` | `[Rust vs Other Language + PPL Analysis]` |
+| Member 4 | `[2]` | `[1]` | `[1]` | `[2]` | `[Exercises + Common Mistakes + Challenge ]` |
 
 ### Teamwork Reflection
 
@@ -865,21 +865,21 @@ Rust ใช้ Ownership, Borrowing และ Lifetime ให้ Compiler ตร
 
 ## 15. Final Checklist
 
-- [ ] Learning Objectives ครบ 3–4 ข้อ
-- [ ] Key Concepts ครบถ้วน
-- [ ] Syntax / Rules
-- [ ] Runnable Code Examples
-- [ ] Code Compile และ Run ได้จริง
-- [ ] Common Mistakes
-- [ ] Exercises 2 ข้อ พร้อม Solutions
-- [ ] PPL Perspective
-- [ ] Rust vs Other Language
-- [ ] References อย่างน้อย 4 แหล่ง
-- [ ] AI Usage Declaration
-- [ ] GitHub Contribution
-- [ ] สมาชิกทั้ง 4 คนมีส่วนร่วม
-- [ ] สมาชิกทั้ง 4 คนพร้อมนำเสนอคนละ 5 นาที
-- [ ] สมาชิกทุกคนสามารถอธิบาย Code ของกลุ่มได้
+- [✓] Learning Objectives ครบ 3–4 ข้อ
+- [✓] Key Concepts ครบถ้วน
+- [✓] Syntax / Rules
+- [✓] Runnable Code Examples
+- [✓] Code Compile และ Run ได้จริง
+- [✓] Common Mistakes
+- [✓] Exercises 2 ข้อ พร้อม Solutions
+- [✓] PPL Perspective
+- [✓] Rust vs Other Language
+- [✓] References อย่างน้อย 4 แหล่ง
+- [✓] AI Usage Declaration
+- [✓] GitHub Contribution
+- [✓] สมาชิกทั้ง 4 คนมีส่วนร่วม
+- [✓] สมาชิกทั้ง 4 คนพร้อมนำเสนอคนละ 5 นาที
+- [✓] สมาชิกทุกคนสามารถอธิบาย Code ของกลุ่มได้
 
 ---
 
